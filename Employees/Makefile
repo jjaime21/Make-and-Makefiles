@@ -13,6 +13,9 @@ TARGET = employee
 # Compile with all errors and warnings
 CFLAGS = -c -Wall -Wextra
 
+# Default Target
+all: $(TARGET)
+
 # Link all object files into the final executable
 $(TARGET): main.o Employee.o Officer.o Supervisor.o
 	$(CC) -o $(TARGET) main.o Employee.o Officer.o Supervisor.o
